@@ -1,0 +1,4 @@
+#define need _NEED_
+#include "file_to_be_included.txt"
+#include "another_include_file.txt"
+Hello I am the main

@@ -1,0 +1,2 @@
+#pragma once
+I need to be here only once
