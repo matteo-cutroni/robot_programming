@@ -95,6 +95,7 @@ MatF  MatF::operator* (float f) const {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   assert (other.cols==cols && other.rows==rows && "dim mismatch");
 >>>>>>> 1cccbd5 (secondo esercizio)
@@ -105,6 +106,8 @@ MatF  MatF::operator* (float f) const {
   assert (other.cols==cols && other.rows==rows && "dim mismatch");
 >>>>>>> 1cccbd5 (secondo esercizio)
 >>>>>>> f2a5d27 (secondo esercizio)
+=======
+>>>>>>> 5f7bf5d (pre merge)
   MatF returned (*this);
   // TODO: fillme DONE
   for (int i; i<dimension; i++) returned.at(i) *= f;
