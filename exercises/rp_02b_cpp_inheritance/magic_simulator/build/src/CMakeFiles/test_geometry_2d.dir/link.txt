@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/test_geometry_2d.dir/test_geometry_2d.cpp.o -o test_geometry_2d  -Wl,-rpath,/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/src libsimple_sim_library.so 
