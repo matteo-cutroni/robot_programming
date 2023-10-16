@@ -97,7 +97,7 @@ struct Isometry2 {
   Isometry2(const Vec3& src) {
     const Scalar& x=src[0];
     const Scalar& y=src[1];
-    const Scalar& theta=src[1];
+    const Scalar& theta=src[2];
     const Scalar s=sin(theta);
     const Scalar c=cos(theta);
     rotation[0][0]=c; rotation[0][1]=-s;
