@@ -1,0 +1,6 @@
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/CMakeFiles/rebuild_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/src/CMakeFiles/simple_sim_library.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/src/CMakeFiles/test_geometry_2d.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/src/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator/build/src/CMakeFiles/rebuild_cache.dir

@@ -10,6 +10,15 @@ ostream& operator << (ostream& os, const Vec2& src) {
   return os;
 }
 
+ostream& operator << (ostream& os, const Vec2i& src) {
+  os << "Vec2i " << (&src) << " [ ";
+  for (int i=0; i<src.Dim; ++i) {
+    os << src.values[i] << " ";
+  }
+  os << "]";
+  return os;
+}
+
 ostream& operator << (ostream& os, const Vec3& src) {
   os << "Vec3 (" << &src << ") [ ";
   for (int i=0; i<src.Dim; ++i) {
@@ -29,6 +38,16 @@ ostream& operator << (ostream& os, const Isometry2& src) {
   return os;
 }
 
+GridMap::GridMap(int rows_, int cols_, Scalar resolution_) {
+  values = new char[rows_*cols_];
+  rows = rows_;
+  cols = cols_;
+  origin = Vec2i({rows_/2, cols_/2});
+  resolution = resolution_;
+  inv_resolution = 1.0 / resolution;
+}
+
+GridMap::~GridMap(){delete[] values;}
 
 // TODO 13:
 // traverses the grid along a ray having direction "direction", represented as a unit vector
@@ -42,5 +61,20 @@ bool GridMap::scanRay(Vec2& hit,
                      const Vec2& direction,
                      const Vec2& origin) {
   //TODO
+  Vec2i current_position = world2grid(origin);
+  Vec2 current_position_f = origin;
+
+  while(true) {
+    if (!inside(current_position)) return false;
+
+    if (at(current_position[0], current_position[1]) > 127) {
+      hit = grid2world(current_position);
+      return true;
+    }
+
+    current_position_f += direction * 0.01; // tiny movement to this direction
+    current_position = world2grid(current_position_f);
+  }
+
   return false;
 }
