@@ -1,11 +1,6 @@
 #include "grid_map.h"
 using namespace std;
 
-// TODO 8: make a constructor that
-// - allocates rows*cols char in values;
-// - stores rows and cols in member object
-// - sets the origin to the middle (in pixels)
-// - sets the resolution and inv_resolution
 GridMap::GridMap(int rows_, int cols_, Scalar resolution_) {
   values = new uint8_t[rows_ * cols_];
   rows = rows_;
@@ -17,16 +12,7 @@ GridMap::GridMap(int rows_, int cols_, Scalar resolution_) {
 
 GridMap::~GridMap() { delete[] values; }
 
-// TODO 13:
-// traverses the grid along a ray having direction "direction", represented as a
-// unit vector the ray starts at "origin" the function proceeds by walking on a
-// line origin + direction*res*k (with k parameter) until it either
-// -- finds a cell whose value is > than a threshold (127) [return true]
-// -- exits from the grid [return false]
-// the value "hit" should contain the last traversed coordinates
 bool GridMap::scanRay(Vec2& hit, const Vec2& origin, const Vec2& direction, const Scalar max_range) {
-  // TODO
-
   Scalar range=0;
   while (range<max_range) {
     hit = origin + direction*range;

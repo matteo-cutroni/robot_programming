@@ -36,12 +36,10 @@ struct Vec2 {
     for (int i = 0; i < Dim; ++i) {
       ret[i] += other[i];
     }
-    // TODO 1
     return ret;
   }
 
   inline Vec2& operator+=(const Vec2& other) {
-    // TODO 2
     for (int i = 0; i < Dim; ++i) {
       values[i] += other[i];
     }
@@ -49,7 +47,6 @@ struct Vec2 {
   }
 
   inline Vec2 operator*(const Scalar& other) const {
-    // TODO 3
     Vec2 ret = *this;
     for (int i = 0; i < Dim; ++i) {
       ret[i] *= other;
@@ -58,7 +55,6 @@ struct Vec2 {
   }
 
   inline Vec2& operator*=(const Vec2& other) {
-    // TODO 4
     for (int i = 0; i < Dim; ++i) {
       values[i] *= other[i];
     }
@@ -69,8 +65,6 @@ struct Vec2 {
 // streaming operator allows to use cout << vec3 to print on a stream
 std::ostream& operator<<(std::ostream& os, const Vec2& src);
 
-// TODO 5: define a class Vec2i that operates on integers instead of scalars,
-// and has all functions above
 struct Vec2i {
   static constexpr int Dim = 2;
   int values[Dim];
@@ -82,12 +76,10 @@ struct Vec2i {
     for (int i = 0; i < Dim; ++i) {
       ret[i] += other[i];
     }
-    // TODO 1
     return ret;
   }
 
   inline Vec2i& operator+=(const Vec2i& other) {
-    // TODO 2
     for (int i = 0; i < Dim; ++i) {
       values[i] += other[i];
     }
@@ -95,7 +87,6 @@ struct Vec2i {
   }
 
   inline Vec2i operator*(const int& other) const {
-    // TODO 3
     Vec2i ret = *this;
     for (int i = 0; i < Dim; ++i) {
       ret[i] *= other;
@@ -104,7 +95,6 @@ struct Vec2i {
   }
 
   inline Vec2i& operator*=(const Vec2i& other) {
-    // TODO 4
     for (int i = 0; i < Dim; ++i) {
       values[i] *= other[i];
     }
@@ -112,7 +102,6 @@ struct Vec2i {
   }
 };
 
-// TODO 6: write the stream operator for Vec2i
 std::ostream& operator<<(std::ostream& os, const Vec2i& src);
 
 // same as before but with 3 dimensions
@@ -123,7 +112,7 @@ struct Vec3 {
   Scalar& operator[](int p) { return values[p]; }
   const Scalar& operator[](int p) const { return values[p]; }
 
-  // default constructir
+  // default constructor
   Vec3(){}
 
   Vec3(Scalar x, Scalar y, Scalar z) {
@@ -137,12 +126,10 @@ struct Vec3 {
     for (int i = 0; i < Dim; ++i) {
       ret[i] += other[i];
     }
-    // TODO 1
     return ret;
   }
   
   inline Vec3& operator+=(const Vec3& other) {
-    // TODO 2
     for (int i = 0; i < Dim; ++i) {
       values[i] += other[i];
     }
@@ -150,7 +137,6 @@ struct Vec3 {
   }
 
   inline Vec3 operator*(const Scalar& other) const {
-    // TODO 3
     Vec3 ret = *this;
     for (int i = 0; i < Dim; ++i) {
       ret[i] *= other;
@@ -159,7 +145,6 @@ struct Vec3 {
   }
 
   inline Vec3& operator*=(const Vec3& other) {
-    // TODO 4
     for (int i = 0; i < Dim; ++i) {
       values[i] *= other[i];
     }

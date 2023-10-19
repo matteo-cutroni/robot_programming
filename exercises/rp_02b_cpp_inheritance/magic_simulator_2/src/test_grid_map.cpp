@@ -37,5 +37,6 @@ int main(int argc, char** argv) {
     showCanvas(canvas, 0);
     
     alpha+=0.01;
+    cerr << "alpha: " << alpha << endl;
   }
 }
