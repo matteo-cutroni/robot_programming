@@ -1,41 +1,5 @@
-#include "geometry_2d.h"
+#include "grid_map.h"
 using namespace std;
-
-ostream& operator<<(ostream& os, const Vec2& src) {
-  os << "Vec2 " << (&src) << " [ ";
-  for (int i = 0; i < src.Dim; ++i) {
-    os << src.values[i] << " ";
-  }
-  os << "]";
-  return os;
-}
-
-std::ostream& operator<<(std::ostream& os, const Vec2i& src) {
-  os << "Vec2i " << (&src) << " [ ";
-  for (int i = 0; i < src.Dim; ++i) {
-    os << src.values[i] << " ";
-  }
-  os << "]";
-  return os;
-}
-
-ostream& operator<<(ostream& os, const Vec3& src) {
-  os << "Vec3 (" << &src << ") [ ";
-  for (int i = 0; i < src.Dim; ++i) {
-    os << src.values[i] << " ";
-  }
-  os << "]";
-  return os;
-}
-
-ostream& operator<<(ostream& os, const Isometry2& src) {
-  os << "Iso2 (" << &src << ") " << endl;
-  for (int r = 0; r < src.Dim; ++r) {
-    for (int c = 0; c < src.Dim; ++c) os << src.rotation[r][c] << " ";
-    os << "| " << src.translation[r] << endl;
-  }
-  return os;
-}
 
 // TODO 8: make a constructor that
 // - allocates rows*cols char in values;

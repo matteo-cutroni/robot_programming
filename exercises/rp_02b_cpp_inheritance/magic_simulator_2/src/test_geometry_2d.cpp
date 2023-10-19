@@ -1,6 +1,7 @@
 #include <iostream>
 
-#include "geometry_2d.h"
+#include "vec_x.h"
+#include "isometry_2.h"
 
 using namespace std;
 
@@ -39,26 +40,4 @@ int main(int argc, char** argv) {
   test_vect[1] = 0;
   Vec2 res = iso * test_vect;
   cout << "iso * test_vect " << res << endl;
-
-  GridMap grid_map(0,0, 0.1);
-  grid_map.loadFromImage(argv[1], 0.1);
-  Canvas canvas;
-  Vec2 center=grid_map.grid2world(grid_map.origin);
-  cerr << "center: " << center[0] << "  "<< center[1] << endl;
-  cerr << "origin: " << grid_map.origin[0] << "  "<< grid_map.origin[1] << endl;
-  
-  float alpha=0;
-  while(1) {
-    grid_map.draw(canvas);
-    Vec2 direction;
-    direction[0]=cos(alpha);
-    direction[1]=sin(alpha);
-    Vec2 dest;
-    bool hit = grid_map.scanRay(dest, center, direction, 100);
-    drawLine(canvas, grid_map.world2grid(center), grid_map.world2grid(dest), 127);
-    
-    showCanvas(canvas, 0);
-    
-    alpha+=0.01;
-  }
 }

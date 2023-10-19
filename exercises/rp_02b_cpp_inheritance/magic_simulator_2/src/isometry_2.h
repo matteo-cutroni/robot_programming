@@ -27,6 +27,9 @@ struct Isometry2 {
     translation[1] = y;
   }
 
+  Isometry2(Scalar x, Scalar y, Scalar theta):
+    Isometry2(Vec3(x,y,theta)){}
+  
   Vec3 toVector() const {
     Vec3 dest;
     dest[0] = translation[0];

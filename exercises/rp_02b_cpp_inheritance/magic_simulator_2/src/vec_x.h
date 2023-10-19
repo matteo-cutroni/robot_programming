@@ -123,6 +123,15 @@ struct Vec3 {
   Scalar& operator[](int p) { return values[p]; }
   const Scalar& operator[](int p) const { return values[p]; }
 
+  // default constructir
+  Vec3(){}
+
+  Vec3(Scalar x, Scalar y, Scalar z) {
+    values[0]=x;
+    values[1]=y;
+    values[2]=z;
+  }
+  
   inline Vec3 operator+(const Vec3& other) const {
     Vec3 ret = *this;
     for (int i = 0; i < Dim; ++i) {
@@ -131,7 +140,7 @@ struct Vec3 {
     // TODO 1
     return ret;
   }
-
+  
   inline Vec3& operator+=(const Vec3& other) {
     // TODO 2
     for (int i = 0; i < Dim; ++i) {
