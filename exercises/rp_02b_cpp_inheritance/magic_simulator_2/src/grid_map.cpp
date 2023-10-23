@@ -14,11 +14,9 @@ GridMap::~GridMap() { delete[] values; }
 
 bool GridMap::scanRay(Vec2& hit, const Vec2& origin, const Vec2& direction, const Scalar max_range) {
   Scalar range=0;
-  cerr << "range: " << range << " max_range: " << max_range <<endl;
   while (range<max_range) {
     hit = origin + direction*range;
     Vec2i int_endpoint=world2grid(hit);
-    cerr << "ep: " << int_endpoint << endl;
     range+=resolution;
     if (!inside(int_endpoint))
       return false;
