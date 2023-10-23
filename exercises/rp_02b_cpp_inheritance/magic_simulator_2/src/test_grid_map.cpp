@@ -32,6 +32,9 @@ int main(int argc, char** argv) {
     direction[1]=sin(alpha);
     Vec2 dest;
     bool hit = grid_map.scanRay(dest, center, direction, 100);
+    cerr << "hit: " << hit << endl;
+    cerr << "origin: " << grid_map.world2grid(center) << endl;
+    cerr << "endpoint: " << grid_map.world2grid(dest) << endl;
     drawLine(canvas, grid_map.world2grid(center), grid_map.world2grid(dest), 127);
     
     showCanvas(canvas, 0);

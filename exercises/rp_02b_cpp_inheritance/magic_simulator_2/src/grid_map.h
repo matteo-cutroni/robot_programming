@@ -49,7 +49,7 @@ struct GridMap {
   inline Vec2 grid2world(const Vec2i& src) {
     Vec2 dest;
     dest[0] = (src[0] - origin[0]) * resolution;
-    dest[1] = (src[0] - origin[1]) * resolution;
+    dest[1] = (src[1] - origin[1]) * resolution;
     return dest;
   }
 

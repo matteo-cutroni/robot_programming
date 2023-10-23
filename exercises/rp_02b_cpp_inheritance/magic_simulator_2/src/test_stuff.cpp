@@ -76,7 +76,7 @@ void drawItems(Canvas& canvas, WorldItem** items) {
 //TODO 8. write a function that returns true if there is at least one cell
 //        with value < 127 within a radius of "radius", centered in  "center".
 
-void checkCollision(const GridMap& grid_map, const Isometry2f& pose, const float radius);
+bool checkCollision(const GridMap& grid_map, const Isometry2& pose, const float radius);
 
 int main(int argc, char** argv) {
  
