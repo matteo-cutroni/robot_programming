@@ -6,6 +6,20 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+  if (argc<2) {
+    cout << "usage: " << argv[0] << " <image_file> <resolution>" << endl;
+    return -1;
+  }
+
+  const char* fileimage = argv[1];
+  Scalar resolution = atof(argv[2]);
+
+  cout << "Running " << argv[0] 
+       << "with arguments: " << endl
+       << "-filename: " << argv[1] << endl
+       << "-resolution: " << argv[2] << endl;
+
+  
   Vec2i v0;
   v0[0] = 1;
   v0[1] = 2;

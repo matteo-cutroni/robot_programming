@@ -1,0 +1,14 @@
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/CMakeFiles/rebuild_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/CMakeFiles/rebuild_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/linalg/CMakeFiles/vec_f_library.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/linalg/CMakeFiles/mat_f_library.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/linalg/CMakeFiles/vec_f_test.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/linalg/CMakeFiles/mat_f_test.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/linalg/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/linalg/CMakeFiles/rebuild_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/btree/CMakeFiles/btree_library.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/btree/CMakeFiles/btree_test.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/btree/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02_cpp_intro/exercise/build/src/btree/CMakeFiles/rebuild_cache.dir

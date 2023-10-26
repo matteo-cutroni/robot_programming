@@ -7,4 +7,5 @@ project(exercise_2)
 
 # add project source code
 add_subdirectory(src)
+
 # TODO do the same for executables

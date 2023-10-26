@@ -75,22 +75,64 @@ MatF MatF::operator + (const MatF& other) const {
   assert (other.cols==cols && other.rows==rows && "dim mismatch");
   MatF returned (*this);
 
-  // TODO: fillme
-
+  // TODO: fillme DONE
+  for (int i; i<dimension; i++) returned.at(i) += other.at(i);
   return returned;
 }
 
 //returns the difference this - other
 MatF MatF::operator - (const MatF& other) const {
-
-    // TODO: fillme
-
+  assert (other.cols==cols && other.rows==rows && "dim mismatch");
+  MatF returned (*this);
+  // TODO: fillme DONE
+  for (int i; i<dimension; i++) returned.at(i) -= other.at(i);
+  return returned;
 }  
 
 
 // returns this*f
 MatF  MatF::operator* (float f) const {
-  // TODO: fillme
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6ab2a58 (pre merge)
+=======
+>>>>>>> 12dadc2 (secondo esercizio)
+=======
+  assert (other.cols==cols && other.rows==rows && "dim mismatch");
+>>>>>>> 1cccbd5 (secondo esercizio)
+=======
+>>>>>>> 5f7bf5d (pre merge)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 12dadc2 (secondo esercizio)
+=======
+=======
+  assert (other.cols==cols && other.rows==rows && "dim mismatch");
+>>>>>>> 1cccbd5 (secondo esercizio)
+>>>>>>> f2a5d27 (secondo esercizio)
+<<<<<<< HEAD
+=======
+>>>>>>> 5f7bf5d (pre merge)
+=======
+=======
+  assert (other.cols==cols && other.rows==rows && "dim mismatch");
+>>>>>>> 1cccbd5 (secondo esercizio)
+>>>>>>> f2a5d27 (secondo esercizio)
+=======
+>>>>>>> 6ab2a58 (pre merge)
+=======
+>>>>>>> 12dadc2 (secondo esercizio)
+  MatF returned (*this);
+  // TODO: fillme DONE
+  for (int i; i<dimension; i++) returned.at(i) *= f;
+  return returned;
 }
 
 // returns this* other
@@ -98,6 +140,13 @@ VecF  MatF::operator* (const VecF& other) const {
   assert(other.dim==cols && "dim mismatch");
   VecF returned (rows);
   // TODO: fillme
+  for (int i=0; i<rows; ++i) {
+    float acc = 0.0f;
+    for (int c=0; c<cols; ++c){
+      acc += at(i,c)*other.at(c);
+    }
+    returned.at(i) = acc;
+  }
   return returned;
 }
 
@@ -106,6 +155,7 @@ MatF  MatF::operator* (const MatF& other) const {
   assert(cols==other.rows && "dimension mismatch");
   MatF returned(rows, other.cols);
   //TODO: fillme
+  
   return returned;
 }
 
