@@ -39,7 +39,6 @@ public:
     return true;
   }
             
-  void draw(Canvas& canvas, bool show_parent) const;
-
+  virtual void draw(Canvas& canvas, bool show_parent) const;
   
 };

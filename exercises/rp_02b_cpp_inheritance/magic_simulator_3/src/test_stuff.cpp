@@ -6,7 +6,89 @@
 
 using namespace std;
 
+struct LaserScan {
+  Scalar
+    range_min=0.1,
+    range_max=10,
+    angle_min=-M_PI/2,
+    angle_max=M_PI/2;
+  int ranges_num= 0;
+  Scalar * ranges = nullptr;
 
+  LaserScan (Scalar range_min=0.1,
+             Scalar range_max=10,
+             Scalar angle_min=-M_PI/2,
+             Scalar angle_max=M_PI/2,
+             int ranges_num=180)
+ {
+   this->range_min= range_min;
+   this->range_max= range_max;
+   this->angle_min= angle_min;
+   this->angle_max= angle_max;
+   this->ranges_num = ranges_num;
+  
+   ranges = new Scalar[ranges_num];
+   for (int i=0; i<ranges_num; ++i)
+     ranges[i]=range_max;
+ }
+
+  ~LaserScan() {
+    delete [] ranges;
+  }
+
+  void draw(Canvas& canevasso, const GridMap& grid_map, const Isometry2& pose) {
+
+    Vec2i center_px=grid_map.world2grid(pose.translation);
+    Scalar angle_increment = (angle_max-angle_min)/ranges_num;
+    Isometry2 rotation=pose;
+    rotation.translation.setZero();
+    
+    for (int i=0; i<ranges_num; ++i) {
+      Scalar beam_angle=angle_min+angle_increment*i;
+      Vec2 d={cos(beam_angle),
+              sin(beam_angle)};
+      d=rotation * d;
+      Vec2 ep = pose.translation + d*ranges[i];
+      Vec2i ep_px = grid_map.world2grid(ep);
+      drawLine(canevasso, center_px, ep_px, 90); 
+    }
+  }
+};
+
+
+struct LaserScanner: public WorldItem{
+  LaserScan& scan;
+
+  LaserScanner(LaserScan& scn,
+            WorldItem& par,
+            const Isometry2& pos):
+    WorldItem(par, pos),
+    scan(scn)
+  {}
+
+  void draw(Canvas& canvas, bool show_parent) const {
+    scan.draw(canvas, *grid_map, globalPose());
+  }
+
+  void getScan() {
+    Isometry2 gp=globalPose();
+    Isometry2 rotation=gp;
+    rotation.translation = {0,0};
+    Scalar angle_increment = (scan.angle_max-scan.angle_min)/scan.ranges_num;
+    
+    for (int i=0; i<scan.ranges_num; ++i) {
+      Scalar beam_angle=scan.angle_min+angle_increment*i;
+      Vec2 d={cos(beam_angle),
+              sin(beam_angle)};
+      d=rotation * d;
+      scan.ranges[i] = grid_map->scanRay(gp.translation, d, scan.range_max);
+    }
+    
+    
+  }
+};
+  
+  
 void printItems(WorldItem** items) {
   while (*items) {
     WorldItem* v = *items;
@@ -66,20 +148,24 @@ int main(int argc, char** argv) {
   object_1.radius=2;
   items[2] = &object_1;
 
-  WorldItem object_2(object_1, Isometry2(0, -1, -0.5));
-  object_2.radius = 0.5;
-  items[3] = &object_2;
+  LaserScan scan;
+
+  LaserScanner scanner(scan, object_1, Isometry2(0, -1, -0.5));
+  scanner.radius = 0.5;
+  items[3] = &scanner;
+
 
   
-
   const Isometry2 forward(0.1, 0, 0);
   const Isometry2 backward(-0.1, 0, 0);
   const Isometry2 left(0, 0, 0.1);
   const Isometry2 right(0, 0, -0.1);
 
   while (true) {
+    scanner.getScan();
     grid_map.draw(canvas);
     drawItems(canvas, items);
+    //scan.draw(canvas, grid_map, object_1.globalPose());
     int ret = showCanvas(canvas, 0);
     std::cerr << "Key pressed: " << ret << std::endl;
 
