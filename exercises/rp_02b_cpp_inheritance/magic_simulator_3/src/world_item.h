@@ -62,7 +62,7 @@ public:
   // TEST IT
 
   // TODO 6:  add another checkCollision(const WorldItem& other)
-  // that returns true if *this (or one of its descendants)
+  // that returns true if *this 
   // collides with other (or one of its descendants)
   //
   // TEST IT
@@ -106,10 +106,15 @@ public:
     return true;
   }
             
+  // TODO 10:
+  // make the draw to draw all children's draw
   virtual void draw(Canvas& canvas, bool show_parent) const;
 
+  
   // this will be called by the simulator
   // the argument time_interval specifies the time elapsed between the previous call of
   // tick and now
+  // TODO 11
+  // make the tick call the tick of all other objects
   virtual void tick(float time_interval);
 };
