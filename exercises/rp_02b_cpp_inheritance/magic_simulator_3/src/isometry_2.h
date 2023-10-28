@@ -91,7 +91,6 @@ struct Isometry2 {
 
   // (R|t)*v = R*v+t;
   inline Vec2 operator*(const Vec2& other) {
-    // TODO 7
     Vec2 ret;
     for (int r = 0; r < Dim; ++r) {
       Scalar acc = 0.0;

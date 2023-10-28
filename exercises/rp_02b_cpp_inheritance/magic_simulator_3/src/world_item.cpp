@@ -64,4 +64,5 @@ bool WorldItem:: checkCollision() const  {
   return false;
 }
 
-
+void WorldItem::tick(float time_interval){
+}

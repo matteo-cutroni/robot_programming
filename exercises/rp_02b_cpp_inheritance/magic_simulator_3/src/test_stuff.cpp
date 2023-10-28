@@ -4,8 +4,9 @@
 #include "isometry_2.h"
 #include "world_item.h"
 
-//TODO 1: refactor this code, separating headers and cpp for laserScanner
-
+//TODO 1: refactor this code, separating headers and cpp for
+//        LaserScanner
+//        LaserScan
 
 using namespace std;
 
@@ -104,7 +105,6 @@ void printItems(WorldItem** items) {
   }
 }
 
-// TODO 6  write a function that draws the object array on the canvas
 void drawItems(Canvas& canvas, WorldItem** items) {
   while (*items) {
     WorldItem* v = *items;
@@ -112,10 +112,6 @@ void drawItems(Canvas& canvas, WorldItem** items) {
     ++items;
   }
 }
-
-// TODO 8. write a function that returns true if there is at least one cell
-//        with value < 127 within a radius of "radius", centered in  "center".
-
 
 int main(int argc, char** argv) {
   if (argc < 2) {
@@ -191,6 +187,4 @@ int main(int argc, char** argv) {
     object_1.move(motion_iso);
     
   }
-
-  // TODO 9. test the check_collision
 }

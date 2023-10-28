@@ -35,14 +35,6 @@ struct GridMap {
   // same as above with write access
   inline uint8_t& at(const Vec2i& pos)  { return at(pos[1], pos[0]);  }
 
-  
-
-  // converts world coordinates to grid coordinates
-  // beware that dest[0]=cols, dest[1]=rows
-  // TODO 1    arrange this conversion so that the positive
-  //           direction of the y DECREASES as the pixel row increase
-  //           The origin should still be mapped at the center of the image
-  //           (origin)
   inline Vec2i world2grid(const Vec2& src) const {
     Vec2i dest;
     dest[0] = origin[0] + inv_resolution * src[0];
@@ -50,10 +42,6 @@ struct GridMap {
     return dest;
   };
 
-  // TODO 2    make the inverse operation of TODO 1
-  //  dest[1] = -(src[1] - origin[1]) * resolution
-
-  // converts grid coordinates to world coordinates
   inline Vec2 grid2world(const Vec2i& src) const {
     Vec2 dest;
     dest[0] = (src[0] - origin[0]) * resolution;
