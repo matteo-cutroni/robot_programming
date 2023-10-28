@@ -4,6 +4,9 @@
 #include "isometry_2.h"
 #include "world_item.h"
 
+//TODO 1: refactor this code, separating headers and cpp for laserScanner
+
+
 using namespace std;
 
 struct LaserScan {
