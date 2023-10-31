@@ -130,3 +130,18 @@ class World : public WorldItem {
 
   void draw(Canvas& canvas, bool show_parent) const override;
 };
+
+class UnicyclePlatform : public WorldItem {
+ public:
+  Scalar tvel = 0, rvel = 0;
+  UnicyclePlatform(WorldItem& p, const Isometry2& iso = Isometry2::Identity())
+      : WorldItem(p.grid_map, &p, iso) {}
+
+  inline void tick(float time_interval) override {
+    Scalar theta = globalPose().toVector()[2];
+    Isometry2 delta_state(tvel * cos(theta) * time_interval,
+                          tvel * sin(theta) * time_interval,
+                          rvel * time_interval);
+    move(delta_state);
+  }
+};

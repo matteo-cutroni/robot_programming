@@ -59,22 +59,27 @@ int main(int argc, char** argv) {
 
   World world_object(grid_map);
   items[0] = &world_object;
-  WorldItem object_0(world_object, Isometry2(10, 10, 0.5));
-  items[1] = &object_0;
 
-  WorldItem object_1(world_object, Isometry2(0, -1, -0.5));
-  object_1.radius = 2;
-  items[2] = &object_1;
+  UnicyclePlatform robot(world_object);
+  robot.radius = 1;
+  robot.tvel = 1;
+  robot.rvel = -0.1;
+  items[1] = &robot;
+  // WorldItem object_0(world_object, Isometry2(10, 10, 0.5));
+  // items[1] = &object_0;
 
-  WorldItem object_2(object_1, Isometry2(5, 0, 0));
-  object_2.radius = 1;
-  items[3] = &object_2;
+  // WorldItem object_1(world_object, Isometry2(0, -1, -0.5));
+  // object_1.radius = 2;
+  // items[2] = &object_1;
 
-  // LaserScan scan;
+  // WorldItem object_2(object_1, Isometry2(5, 0, 0));
+  // object_2.radius = 1;
+  // items[3] = &object_2;
 
-  // LaserScanner scanner(scan, object_1, Isometry2(0, -1, -0.5));
-  // scanner.radius = 0.5;
-  // items[3] = &scanner;
+  LaserScan scan;
+  LaserScanner scanner(scan, robot, Isometry2(0, -1, -0.5), 1);
+  scanner.radius = 0.5;
+  items[2] = &scanner;
 
   const Isometry2 forward(0.1, 0, 0);
   const Isometry2 backward(-0.1, 0, 0);
@@ -85,6 +90,9 @@ int main(int argc, char** argv) {
     // scanner.getScan();
     grid_map.draw(canvas);
     drawItems(canvas, items);
+    robot.tick(0.01);
+    scanner.tick(0.01);
+
     // scan.draw(canvas, grid_map, object_1.globalPose());
     int ret = showCanvas(canvas, 0);
     std::cerr << "Key pressed: " << ret << std::endl;
@@ -105,6 +113,6 @@ int main(int argc, char** argv) {
         break;
       default:;
     }
-    object_1.move(motion_iso);
+    // object_1.move(motion_iso);
   }
 }

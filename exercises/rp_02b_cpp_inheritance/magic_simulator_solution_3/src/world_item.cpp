@@ -95,7 +95,12 @@ bool WorldItem::checkCollision(const WorldItem& other) const {
   return false;
 }
 
-void WorldItem::tick(float time_interval) {}
+void WorldItem::tick(float time_interval) {
+  // do your stuff
+  for (int i = 0; i < num_children; ++i) {
+    children[i]->tick(time_interval);
+  }
+}
 
 void World::draw(Canvas& canvas, bool show_parent) const {
   Vec2 x_axis = {1, 0};

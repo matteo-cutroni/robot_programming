@@ -68,7 +68,7 @@ int main(int argc, char** argv) {
 
   LaserScan scan;
 
-  LaserScanner scanner(scan, object_1, Isometry2(0, -1, -0.5));
+  LaserScanner scanner(scan, object_1, Isometry2(0, -1, -0.5), 1000);
   scanner.radius = 0.5;
   items[3] = &scanner;
 
