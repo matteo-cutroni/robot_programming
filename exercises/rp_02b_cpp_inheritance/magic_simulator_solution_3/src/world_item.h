@@ -22,6 +22,11 @@ class WorldItem {
             const Isometry2& iso = Isometry2::Identity())
       : grid_map(g), parent(p), pose_in_parent(iso) {
     memset(children, 0, sizeof(WorldItem*) * (CHILDREN_MAX_NUM + 1));
+
+    if (parent) {
+      parent->children[parent->num_children] = this;
+      parent->num_children++;
+    }
   }
 
  public:
@@ -37,6 +42,11 @@ class WorldItem {
   // TODO 4:
   // write a method "isAncestor(const WorldItem& other)
   // hat returns true if other is an ancestor of this
+  inline bool isAncestor(const WorldItem& other) const {
+    if (!parent) return false;
+    if (parent == &other) return true;
+    return parent->isAncestor(other);
+  }
 
   // TODO 5:
   // rewrite the checkCollision for an object
@@ -83,6 +93,7 @@ class WorldItem {
   // class
 
   bool checkCollision() const;
+  bool checkCollision(const WorldItem& other) const;
 
   inline bool move(const Isometry2& iso) {
     Isometry2 restored_pose_in_parent = pose_in_parent;

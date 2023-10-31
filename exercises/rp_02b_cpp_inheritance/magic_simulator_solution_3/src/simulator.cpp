@@ -66,11 +66,15 @@ int main(int argc, char** argv) {
   object_1.radius = 2;
   items[2] = &object_1;
 
-  LaserScan scan;
+  WorldItem object_2(object_1, Isometry2(5, 0, 0));
+  object_2.radius = 1;
+  items[3] = &object_2;
 
-  LaserScanner scanner(scan, object_1, Isometry2(0, -1, -0.5));
-  scanner.radius = 0.5;
-  items[3] = &scanner;
+  // LaserScan scan;
+
+  // LaserScanner scanner(scan, object_1, Isometry2(0, -1, -0.5));
+  // scanner.radius = 0.5;
+  // items[3] = &scanner;
 
   const Isometry2 forward(0.1, 0, 0);
   const Isometry2 backward(-0.1, 0, 0);
@@ -78,7 +82,7 @@ int main(int argc, char** argv) {
   const Isometry2 right(0, 0, -0.1);
 
   while (true) {
-    scanner.getScan();
+    // scanner.getScan();
     grid_map.draw(canvas);
     drawItems(canvas, items);
     // scan.draw(canvas, grid_map, object_1.globalPose());

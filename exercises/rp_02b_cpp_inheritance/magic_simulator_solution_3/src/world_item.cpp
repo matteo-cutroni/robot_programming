@@ -40,6 +40,10 @@ void WorldItem::draw(Canvas& canvas, bool show_parent) const {
   }
 }
 
+// adjust the check_collision() method so that
+// only for objects whose parent is the root of the tree
+// we check a collision against the map (using TODO 5)
+// AND a collision between *this and all his siblings (using TODO 6)
 bool WorldItem::checkCollision() const {
   Isometry2 pose = globalPose();
   int radius_px = radius * grid_map->inv_resolution;
@@ -58,6 +62,36 @@ bool WorldItem::checkCollision() const {
       if (grid_map->at(p_px) < 127) return true;
     }
   }
+
+  for (int i = 0; i < num_children; ++i) {
+    if (children[i]->checkCollision() == true) return true;
+  }
+
+  if (parent && !parent->parent) {
+    for (int i = 0; i < parent->num_children; ++i) {
+      if (parent->children[i] == this) continue;
+      if (checkCollision(*parent->children[i])) return true;
+    }
+  }
+
+  return false;
+}
+
+bool WorldItem::checkCollision(const WorldItem& other) const {
+  if (isAncestor(other)) return false;
+
+  Vec2 origin = globalPose().translation;
+  Vec2 other_origin = other.globalPose().translation;
+
+  float dx = origin[0] - other_origin[0];
+  float dy = origin[1] - other_origin[1];
+  float distance = sqrt(dx * dx + dy * dy);
+
+  if (distance < (radius + other.radius)) return true;
+  for (int i = 0; i < num_children; ++i) {
+    if (children[i]->checkCollision(other)) return true;
+  }
+
   return false;
 }
 
