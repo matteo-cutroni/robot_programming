@@ -138,10 +138,7 @@ class UnicyclePlatform : public WorldItem {
       : WorldItem(p.grid_map, &p, iso) {}
 
   inline void tick(float time_interval) override {
-    Scalar theta = globalPose().toVector()[2];
-    Isometry2 delta_state(tvel * cos(theta) * time_interval,
-                          tvel * sin(theta) * time_interval,
-                          rvel * time_interval);
+    Isometry2 delta_state(tvel * time_interval, 0, rvel * time_interval);
     move(delta_state);
   }
 };
