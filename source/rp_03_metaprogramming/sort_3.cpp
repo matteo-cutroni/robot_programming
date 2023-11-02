@@ -30,16 +30,7 @@ void myMerge(MyType* dest,
       ++ b2;
     }
     ++dest;
-  }
-  while (b1<middle){
-    *dest=*b1;
-    ++b1;
-    ++dest;
-  }
-  while (b2<end){
-    *dest=*b2;
-    ++b2;
-    ++dest;
+
   }
 };
 

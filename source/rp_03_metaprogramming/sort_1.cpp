@@ -53,7 +53,7 @@ void mySort(MyType* begin, MyType* end, MyType* buf=0) {
   }
   int middle=size/2;
   mySort(begin, begin+middle, buf);
-  mySort(begin+middle, end);
+  mySort(begin+middle, end, buf);
   
   myMerge(buf, begin, begin+middle, end);
   memcpy(begin, buf, sizeof(MyType)*size);
