@@ -142,6 +142,32 @@ test_geometry_2d/fast:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_geometry_2d.dir/build.make src/CMakeFiles/test_geometry_2d.dir/build
 .PHONY : test_geometry_2d/fast
 
+#=============================================================================
+# Target rules for targets named test_grid_map
+
+# Build rule for target.
+test_grid_map: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_grid_map
+.PHONY : test_grid_map
+
+# fast build rule for target.
+test_grid_map/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_grid_map.dir/build.make src/CMakeFiles/test_grid_map.dir/build
+.PHONY : test_grid_map/fast
+
+#=============================================================================
+# Target rules for targets named test_stuff
+
+# Build rule for target.
+test_stuff: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_stuff
+.PHONY : test_stuff
+
+# fast build rule for target.
+test_stuff/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_stuff.dir/build.make src/CMakeFiles/test_stuff.dir/build
+.PHONY : test_stuff/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -152,6 +178,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... simple_sim_library"
 	@echo "... test_geometry_2d"
+	@echo "... test_grid_map"
+	@echo "... test_stuff"
 .PHONY : help
 
 

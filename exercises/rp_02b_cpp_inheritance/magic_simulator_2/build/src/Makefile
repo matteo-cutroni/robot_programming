@@ -144,29 +144,105 @@ test_geometry_2d/fast:
 	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_geometry_2d.dir/build.make src/CMakeFiles/test_geometry_2d.dir/build
 .PHONY : test_geometry_2d/fast
 
-geometry_2d.o: geometry_2d.cpp.o
-.PHONY : geometry_2d.o
+# Convenience name for target.
+src/CMakeFiles/test_grid_map.dir/rule:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test_grid_map.dir/rule
+.PHONY : src/CMakeFiles/test_grid_map.dir/rule
+
+# Convenience name for target.
+test_grid_map: src/CMakeFiles/test_grid_map.dir/rule
+.PHONY : test_grid_map
+
+# fast build rule for target.
+test_grid_map/fast:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_grid_map.dir/build.make src/CMakeFiles/test_grid_map.dir/build
+.PHONY : test_grid_map/fast
+
+# Convenience name for target.
+src/CMakeFiles/test_stuff.dir/rule:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/test_stuff.dir/rule
+.PHONY : src/CMakeFiles/test_stuff.dir/rule
+
+# Convenience name for target.
+test_stuff: src/CMakeFiles/test_stuff.dir/rule
+.PHONY : test_stuff
+
+# fast build rule for target.
+test_stuff/fast:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_stuff.dir/build.make src/CMakeFiles/test_stuff.dir/build
+.PHONY : test_stuff/fast
+
+draw_helpers.o: draw_helpers.cpp.o
+.PHONY : draw_helpers.o
 
 # target to build an object file
-geometry_2d.cpp.o:
-	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o
-.PHONY : geometry_2d.cpp.o
+draw_helpers.cpp.o:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o
+.PHONY : draw_helpers.cpp.o
 
-geometry_2d.i: geometry_2d.cpp.i
-.PHONY : geometry_2d.i
+draw_helpers.i: draw_helpers.cpp.i
+.PHONY : draw_helpers.i
 
 # target to preprocess a source file
-geometry_2d.cpp.i:
-	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.i
-.PHONY : geometry_2d.cpp.i
+draw_helpers.cpp.i:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.i
+.PHONY : draw_helpers.cpp.i
 
-geometry_2d.s: geometry_2d.cpp.s
-.PHONY : geometry_2d.s
+draw_helpers.s: draw_helpers.cpp.s
+.PHONY : draw_helpers.s
 
 # target to generate assembly for a file
-geometry_2d.cpp.s:
-	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.s
-.PHONY : geometry_2d.cpp.s
+draw_helpers.cpp.s:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.s
+.PHONY : draw_helpers.cpp.s
+
+grid_map.o: grid_map.cpp.o
+.PHONY : grid_map.o
+
+# target to build an object file
+grid_map.cpp.o:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o
+.PHONY : grid_map.cpp.o
+
+grid_map.i: grid_map.cpp.i
+.PHONY : grid_map.i
+
+# target to preprocess a source file
+grid_map.cpp.i:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.i
+.PHONY : grid_map.cpp.i
+
+grid_map.s: grid_map.cpp.s
+.PHONY : grid_map.s
+
+# target to generate assembly for a file
+grid_map.cpp.s:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.s
+.PHONY : grid_map.cpp.s
+
+isometry_2.o: isometry_2.cpp.o
+.PHONY : isometry_2.o
+
+# target to build an object file
+isometry_2.cpp.o:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o
+.PHONY : isometry_2.cpp.o
+
+isometry_2.i: isometry_2.cpp.i
+.PHONY : isometry_2.i
+
+# target to preprocess a source file
+isometry_2.cpp.i:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.i
+.PHONY : isometry_2.cpp.i
+
+isometry_2.s: isometry_2.cpp.s
+.PHONY : isometry_2.s
+
+# target to generate assembly for a file
+isometry_2.cpp.s:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.s
+.PHONY : isometry_2.cpp.s
 
 test_geometry_2d.o: test_geometry_2d.cpp.o
 .PHONY : test_geometry_2d.o
@@ -192,6 +268,78 @@ test_geometry_2d.cpp.s:
 	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_geometry_2d.dir/build.make src/CMakeFiles/test_geometry_2d.dir/test_geometry_2d.cpp.s
 .PHONY : test_geometry_2d.cpp.s
 
+test_grid_map.o: test_grid_map.cpp.o
+.PHONY : test_grid_map.o
+
+# target to build an object file
+test_grid_map.cpp.o:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_grid_map.dir/build.make src/CMakeFiles/test_grid_map.dir/test_grid_map.cpp.o
+.PHONY : test_grid_map.cpp.o
+
+test_grid_map.i: test_grid_map.cpp.i
+.PHONY : test_grid_map.i
+
+# target to preprocess a source file
+test_grid_map.cpp.i:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_grid_map.dir/build.make src/CMakeFiles/test_grid_map.dir/test_grid_map.cpp.i
+.PHONY : test_grid_map.cpp.i
+
+test_grid_map.s: test_grid_map.cpp.s
+.PHONY : test_grid_map.s
+
+# target to generate assembly for a file
+test_grid_map.cpp.s:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_grid_map.dir/build.make src/CMakeFiles/test_grid_map.dir/test_grid_map.cpp.s
+.PHONY : test_grid_map.cpp.s
+
+test_stuff.o: test_stuff.cpp.o
+.PHONY : test_stuff.o
+
+# target to build an object file
+test_stuff.cpp.o:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_stuff.dir/build.make src/CMakeFiles/test_stuff.dir/test_stuff.cpp.o
+.PHONY : test_stuff.cpp.o
+
+test_stuff.i: test_stuff.cpp.i
+.PHONY : test_stuff.i
+
+# target to preprocess a source file
+test_stuff.cpp.i:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_stuff.dir/build.make src/CMakeFiles/test_stuff.dir/test_stuff.cpp.i
+.PHONY : test_stuff.cpp.i
+
+test_stuff.s: test_stuff.cpp.s
+.PHONY : test_stuff.s
+
+# target to generate assembly for a file
+test_stuff.cpp.s:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/test_stuff.dir/build.make src/CMakeFiles/test_stuff.dir/test_stuff.cpp.s
+.PHONY : test_stuff.cpp.s
+
+vec_x.o: vec_x.cpp.o
+.PHONY : vec_x.o
+
+# target to build an object file
+vec_x.cpp.o:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o
+.PHONY : vec_x.cpp.o
+
+vec_x.i: vec_x.cpp.i
+.PHONY : vec_x.i
+
+# target to preprocess a source file
+vec_x.cpp.i:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.i
+.PHONY : vec_x.cpp.i
+
+vec_x.s: vec_x.cpp.s
+.PHONY : vec_x.s
+
+# target to generate assembly for a file
+vec_x.cpp.s:
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/simple_sim_library.dir/build.make src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.s
+.PHONY : vec_x.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -202,12 +350,29 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... simple_sim_library"
 	@echo "... test_geometry_2d"
-	@echo "... geometry_2d.o"
-	@echo "... geometry_2d.i"
-	@echo "... geometry_2d.s"
+	@echo "... test_grid_map"
+	@echo "... test_stuff"
+	@echo "... draw_helpers.o"
+	@echo "... draw_helpers.i"
+	@echo "... draw_helpers.s"
+	@echo "... grid_map.o"
+	@echo "... grid_map.i"
+	@echo "... grid_map.s"
+	@echo "... isometry_2.o"
+	@echo "... isometry_2.i"
+	@echo "... isometry_2.s"
 	@echo "... test_geometry_2d.o"
 	@echo "... test_geometry_2d.i"
 	@echo "... test_geometry_2d.s"
+	@echo "... test_grid_map.o"
+	@echo "... test_grid_map.i"
+	@echo "... test_grid_map.s"
+	@echo "... test_stuff.o"
+	@echo "... test_stuff.i"
+	@echo "... test_stuff.s"
+	@echo "... vec_x.o"
+	@echo "... vec_x.i"
+	@echo "... vec_x.s"
 .PHONY : help
 
 

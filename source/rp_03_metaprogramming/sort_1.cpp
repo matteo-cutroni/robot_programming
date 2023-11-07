@@ -53,7 +53,7 @@ void mySort(MyType* begin, MyType* end, MyType* buf=0) {
   }
   int middle=size/2;
   mySort(begin, begin+middle, buf);
-  mySort(begin+middle, end);
+  mySort(begin+middle, end, buf);
   
   myMerge(buf, begin, begin+middle, end);
   memcpy(begin, buf, sizeof(MyType)*size);
@@ -63,7 +63,7 @@ void mySort(MyType* begin, MyType* end, MyType* buf=0) {
 
 int main(int argc, char** argv) {
   int size=atoi(argv[1]);
-  MyType *v=new MyType[atoi(argv[1])];
+  MyType *v=new MyType[size];
   MyType *v_end=v+size;
   for (int i=0; i<size; ++i) {
     v[i]=drand48();

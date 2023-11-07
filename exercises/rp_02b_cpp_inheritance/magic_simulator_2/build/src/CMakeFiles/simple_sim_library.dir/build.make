@@ -69,28 +69,76 @@ include src/CMakeFiles/simple_sim_library.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/simple_sim_library.dir/flags.make
 
-src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o: src/CMakeFiles/simple_sim_library.dir/flags.make
-src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o: ../src/geometry_2d.cpp
-src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o: src/CMakeFiles/simple_sim_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o"
-	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o -MF CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o.d -o CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o -c /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/geometry_2d.cpp
+src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o: src/CMakeFiles/simple_sim_library.dir/flags.make
+src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o: ../src/vec_x.cpp
+src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o: src/CMakeFiles/simple_sim_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o -MF CMakeFiles/simple_sim_library.dir/vec_x.cpp.o.d -o CMakeFiles/simple_sim_library.dir/vec_x.cpp.o -c /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/vec_x.cpp
 
-src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.i"
-	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/geometry_2d.cpp > CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.i
+src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_sim_library.dir/vec_x.cpp.i"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/vec_x.cpp > CMakeFiles/simple_sim_library.dir/vec_x.cpp.i
 
-src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.s"
-	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/geometry_2d.cpp -o CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.s
+src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_sim_library.dir/vec_x.cpp.s"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/vec_x.cpp -o CMakeFiles/simple_sim_library.dir/vec_x.cpp.s
+
+src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o: src/CMakeFiles/simple_sim_library.dir/flags.make
+src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o: ../src/isometry_2.cpp
+src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o: src/CMakeFiles/simple_sim_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o -MF CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o.d -o CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o -c /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/isometry_2.cpp
+
+src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_sim_library.dir/isometry_2.cpp.i"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/isometry_2.cpp > CMakeFiles/simple_sim_library.dir/isometry_2.cpp.i
+
+src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_sim_library.dir/isometry_2.cpp.s"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/isometry_2.cpp -o CMakeFiles/simple_sim_library.dir/isometry_2.cpp.s
+
+src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o: src/CMakeFiles/simple_sim_library.dir/flags.make
+src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o: ../src/grid_map.cpp
+src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o: src/CMakeFiles/simple_sim_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o -MF CMakeFiles/simple_sim_library.dir/grid_map.cpp.o.d -o CMakeFiles/simple_sim_library.dir/grid_map.cpp.o -c /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/grid_map.cpp
+
+src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_sim_library.dir/grid_map.cpp.i"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/grid_map.cpp > CMakeFiles/simple_sim_library.dir/grid_map.cpp.i
+
+src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_sim_library.dir/grid_map.cpp.s"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/grid_map.cpp -o CMakeFiles/simple_sim_library.dir/grid_map.cpp.s
+
+src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o: src/CMakeFiles/simple_sim_library.dir/flags.make
+src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o: ../src/draw_helpers.cpp
+src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o: src/CMakeFiles/simple_sim_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o -MF CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o.d -o CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o -c /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/draw_helpers.cpp
+
+src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.i"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/draw_helpers.cpp > CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.i
+
+src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.s"
+	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/src/draw_helpers.cpp -o CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.s
 
 # Object files for target simple_sim_library
 simple_sim_library_OBJECTS = \
-"CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o"
+"CMakeFiles/simple_sim_library.dir/vec_x.cpp.o" \
+"CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o" \
+"CMakeFiles/simple_sim_library.dir/grid_map.cpp.o" \
+"CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o"
 
 # External object files for target simple_sim_library
 simple_sim_library_EXTERNAL_OBJECTS =
 
-src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/geometry_2d.cpp.o
+src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/vec_x.cpp.o
+src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/isometry_2.cpp.o
+src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/grid_map.cpp.o
+src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/draw_helpers.cpp.o
 src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/build.make
 src/libsimple_sim_library.so: /usr/local/lib/libopencv_gapi.so.4.8.0
 src/libsimple_sim_library.so: /usr/local/lib/libopencv_highgui.so.4.8.0
@@ -108,7 +156,7 @@ src/libsimple_sim_library.so: /usr/local/lib/libopencv_flann.so.4.8.0
 src/libsimple_sim_library.so: /usr/local/lib/libopencv_imgproc.so.4.8.0
 src/libsimple_sim_library.so: /usr/local/lib/libopencv_core.so.4.8.0
 src/libsimple_sim_library.so: src/CMakeFiles/simple_sim_library.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libsimple_sim_library.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libsimple_sim_library.so"
 	cd /home/matteo/Desktop/robotprogramming_2023_24/exercises/rp_02b_cpp_inheritance/magic_simulator_2/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simple_sim_library.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
